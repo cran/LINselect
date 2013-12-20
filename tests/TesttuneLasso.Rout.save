@@ -1,0 +1,124 @@
+
+R version 3.0.1 (2013-05-16) -- "Good Sport"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #source("charge.R")
+> library("LINselect")
+> 
+> set.seed(15) # pour pouvoir comparer des exécutions sucessives
+> ex <- simulData(p=100,n=50,r=0.95,rSN=10)
+> 
+> res.tuneLasso <- tuneLasso(ex$Y,ex$X,method="Glasso",verbose=TRUE)
+Loading required package: lars
+Loaded lars 1.2
+
+[1] "Tuning Gauss Lasso with Vfold CV: V= 10 , dmax= 45"
+[1] "Tuning Gauss Lasso with LinSelect: K= 1.1"
+Warning messages:
+1: In penalty(Delta, n, p, K) :
+  the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 0the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 1the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 2the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 3the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 4the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 5the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 6the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 7the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 8the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 9the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm=  [... truncated]
+2: In penalty(Delta, n, p, K) :
+  the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 0the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 1the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 2the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 3the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 4the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 5the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 6the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 7the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 8the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 9the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm=  [... truncated]
+> res.tuneLasso$Glasso$CV$support
+[1] 3 5 6
+> res.tuneLasso$Glasso$Ls$support
+[1] 6
+> 
+> res.tuneLasso <- tuneLasso(ex$Y,ex$X,method="lasso",verbose=TRUE)
+[1] "Tuning Lasso with Vfold CV: V= 10 , dmax= 45"
+[1] "Tuning Lasso with LINselect: K= 1.1 , a= 0.5 , dmax= 45"
+Warning message:
+In penalty(Delta, n, p, K) :
+  the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 0the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 1the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 2the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 3the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 4the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 5the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 6the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 7the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 8the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm= 9the values of the penalty function greater than 1e+08 are set to Inf 
+ err= 2 n n= 50 Dm=  [... truncated]
+> res.tuneLasso$lasso$CV$support
+ [1]  1  2  3  5  6 10 14 15 29 39 62 70
+> res.tuneLasso$lasso$Ls$support
+ [1]  1  2  3  5  6 10 14 15 29 39 70
+> 
+> set.seed(5) # pour pouvoir comparer des exécutions sucessives
+> ex <- simulData(p=100,n=100,r=0.95,rSN=10)
+> res.tuneLasso <- tuneLasso(ex$Y,ex$X, dmax=20)
+[1] "Tuning Lasso with Vfold CV: V= 10 , dmax= 20"
+[1] "Tuning Lasso with LINselect: K= 1.1 , a= 0.5 , dmax= 20"
+[1] "Tuning Gauss Lasso with Vfold CV: V= 10 , dmax= 20"
+[1] "Tuning Gauss Lasso with LinSelect: K= 1.1"
+> 
+> 
+> set.seed(67) # pour pouvoir comparer des exécutions sucessives
+> ex <- simulData(p=50,n=1000,r=0.95,rSN=10)
+> res.tuneLasso <- tuneLasso(ex$Y,ex$X, dmax=20)
+[1] "Tuning Lasso with Vfold CV: V= 10 , dmax= 20"
+[1] "Tuning Lasso with LINselect: K= 1.1 , a= 0.5 , dmax= 20"
+[1] "Tuning Gauss Lasso with Vfold CV: V= 10 , dmax= 20"
+[1] "Tuning Gauss Lasso with LinSelect: K= 1.1"
+> res.tuneLasso$lasso$CV$coeff
+ Intercept          1          2          3          4          5          6 
+ 0.1647135  2.7556130  1.2685615  2.3579699  3.8343574  1.9404716  1.8675079 
+         7          8          9         10         11         12         13 
+ 0.9317365  1.5753446  1.8289560  1.3481671  0.1092257  1.6669012  0.2112416 
+        14         16         31         40         47 
+ 0.3561641 -0.5043567  0.1308823  0.1200430 -0.1322528 
+> res.tuneLasso$lasso$Ls$coeff
+  Intercept           1           2           3           4           5 
+ 0.15849804  2.74252146  1.24597340  2.37770488  3.82582746  1.95086367 
+          6           7           8           9          10          11 
+ 1.85115434  0.92757356  1.57516136  1.84249184  1.33498363  0.10074183 
+         12          13          14          16          31 
+ 1.67207998  0.20363850  0.34729051 -0.41919165  0.06427059 
+> res.tuneLasso$Glasso$CV$support
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14
+> res.tuneLasso$Glasso$Ls$support
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12
+> 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+ 17.369   0.273  17.685 

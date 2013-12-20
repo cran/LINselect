@@ -1,0 +1,48 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #source("charge.R")
+> library("LINselect")
+> 
+> # simulate data with
+> ex <- simulData(p=100,n=100,r=0.8,rSN=5)
+> 
+> ex1.tuneLasso <- tuneLasso(ex$Y,ex$X)
+Loading required package: lars
+Loaded lars 1.1
+
+[1] "Tuning Lasso with Vfold CV: V= 10 , dmax= 75"
+[1] "Tuning Lasso with LINselect: K= 1.1 , a= 0.5 , dmax= 75"
+[1] "Tuning Gauss Lasso with Vfold CV: V= 10 , dmax= 75"
+[1] "Tuning Gauss Lasso with LinSelect: K= 1.1"
+> 
+> data(diabetes)
+> attach(diabetes)
+> ex.diab <- tuneLasso(y,x2)
+[1] "Tuning Lasso with Vfold CV: V= 10 , dmax= 64"
+[1] "Tuning Lasso with LINselect: K= 1.1 , a= 0.5 , dmax= 64"
+[1] "Tuning Gauss Lasso with Vfold CV: V= 10 , dmax= 64"
+[1] "Tuning Gauss Lasso with LinSelect: K= 1.1"
+> detach(diabetes)
+> 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+ 25.441   0.200  25.810 

@@ -1,0 +1,2 @@
+# Les fonctions R a disposition de l'utilisateur
+export(penalty,tuneLasso,VARselect,simulData)
