@@ -31,7 +31,7 @@ simulData <- function
       }
     }
   }
-  library(mvtnorm)
+ # library(mvtnorm)
   ##note<< Library \code{mvtnorm} is loaded.
   ##details<< The lines of \code{X} are \code{n} i.i.d. gaussian variables with
   ##mean 0 and covariance matrix \code{C}.

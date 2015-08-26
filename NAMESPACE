@@ -1,2 +1,9 @@
 # Les fonctions R a disposition de l'utilisateur
 export(penalty,tuneLasso,VARselect,simulData)
+importFrom("MASS", "lm.ridge")
+importFrom("elasticnet", "enet", "cv.enet")
+importFrom("randomForest", "randomForest")
+importFrom("pls", "plsr")
+importFrom("gtools", "combinations")
+importFrom("mvtnorm", "rmvnorm")
+importFrom("stats", "lm", "pf", "rnorm", "uniroot", "var")

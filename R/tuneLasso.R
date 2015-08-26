@@ -44,7 +44,7 @@ tuneLasso <- function
   if (is.null(max.steps)) max.steps=2*min(p,n)
   if (p>=n) dmax <- floor(min(c(3*p/4,n-5,dmax)))
   if (p<n) dmax <- floor(min(c(p,n-5,dmax)))
-  library(elasticnet)
+#   library(elasticnet)
       ##note<<  library \code{elasticnet} is loaded.
   
   res.lasso <- try(enet(X,Y,lambda=0, intercept=TRUE, normalize=normalize,

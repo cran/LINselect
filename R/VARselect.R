@@ -92,7 +92,7 @@ VARselect <- function
   if (is.element("lasso",method)) {
     if (verbose==TRUE) print(
           paste("LASSO PROCEDURE with option max.steps=",max.steps,"dmax=",min(lasso.dmax, dmax)))
-    library(elasticnet)
+#    library(elasticnet)
     ##note<< When method is \code{lasso}, library \code{elasticnet} is loaded.
     res.lasso <- try(enet(X,Y,lambda=0,intercept=TRUE,normalize=FALSE,max.steps=max.steps))
     if (inherits(res.lasso, "try-error")) {
@@ -126,7 +126,7 @@ VARselect <- function
       print(paste(c("ELASTIC-NET PROEDURE with options max.steps=",max.steps,
             "dmax=",min(en.dmax, dmax),"en.lambda=",en.lambda),collapse=" "))
     }
-    library(elasticnet)
+#    library(elasticnet)
     ##note<< When method is \code{en}, library \code{elasticnet} is loaded.
     m.lasso <- list(NULL)
     Nm <- 0
@@ -178,7 +178,7 @@ lambda =",en.lambda[iL]))
                     min(ridge.dmax,dmax),
                     "ridge.lambda=",ridge.lambda),collapse=" "))
     }
-     library(MASS)
+#     library(MASS)
     ##note<< When method is \code{ridge}, library \code{MASS} is loaded.
     dmax.rdg <- min(ridge.dmax,dmax)
     m.rdg <- list(NULL)
@@ -228,7 +228,7 @@ lambda =",en.lambda[iL]))
       print(paste("RANDOMFOREST PROCEDURE with option dmax=",min(rF.dmax,dmax),
                     "rF.lmtry=",rF.lmtry,collapse=" "))
     }
-    library(randomForest)
+#    library(randomForest)
     ##note<< When method is \code{rF}, library \code{randomForest} is loaded.
     dmax.rF <- min(rF.dmax,dmax)
     m.rF <- list(NULL)
@@ -284,7 +284,7 @@ lmtry =",rF.lmtry[iL]))
       print(paste(c("PLS PROCEDURE with options dmax=",min(pls.dmax,dmax),
            "pls.ncomp=",1:pls.ncomp),collapse=" "))
     }
-    library(pls)
+#    library(pls)
     ##note<< When method is \code{pls}, library \code{pls} is loaded.
     ##details<< When method is \code{pls} or \code{ALpls}, the
     ##\code{LINselect} procedure is carried out considering the number
@@ -337,8 +337,8 @@ lmtry =",rF.lmtry[iL]))
                   "dmax=",min(ALridge.dmax, dmax),
                   "ALridge.lambda=",ALridge.lambda),collapse=" "))
     }
-    library(elasticnet)
-    library(MASS)
+#    library(elasticnet)
+#    library(MASS)
     ##note<< When method is \code{ALridge}, libraries \code{MASS} and \code{elasticnet} are loaded.
     m.lasso <- list(NULL)
     Nm <- 0
@@ -400,8 +400,8 @@ lridge =",ALridge.lambda[iL]))
                   "dmax=",min(ALpls.dmax, dmax),
                   "pls.ncomp=",1:ALpls.ncomp),collapse=" "))
      }
-    library(elasticnet)
-    library(pls)
+#    library(elasticnet)
+#    library(pls)
     ##note<< When method is \code{ALpls}, libraries \code{pls} and \code{elasticnet} are loaded.
     m.lasso <- list(NULL)
     Nm <- 0
@@ -460,7 +460,7 @@ lridge =",ALridge.lambda[iL]))
   # Exhaustive procedure
   if (is.element("exhaustive",method)) {
     if (verbose==TRUE) print("EXHAUSTIVE PROCEDURE")
-    library(gtools)
+#    library(gtools)
     ##note<< When method is \code{exhaustive}, library \code{gtools}
     ##is loaded.
     ##details<< When method is \code{exhaustive}, the maximum

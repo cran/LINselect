@@ -150,7 +150,7 @@ library("LINselect")
 # beta=c(rep(2.5,5),rep(1.5,5),rep(0.5,5),rep(0,p-15))
 ex <- simulData(p=100,n=100,r=0.8,rSN=5)
 
-ex1.VARselect <- VARselect(ex$Y,ex$X,exhaustive.dmax=2)
+\dontrun{ex1.VARselect <- VARselect(ex$Y,ex$X,exhaustive.dmax=2)}
 
 \dontrun{data(diabetes)}
 \dontrun{attach(diabetes)}
