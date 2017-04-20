@@ -1,3 +1,9 @@
+# ---------------------------------------------------------------
+#  LINselect R package
+#  Copyright INRA 2017
+#  INRA, UR1404, Research Unit MaIAGE
+#  F78352 Jouy-en-Josas, France.
+
 ###########################################################################
 #
 # calcul de la penalite

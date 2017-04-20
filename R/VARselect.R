@@ -1,4 +1,10 @@
-# ---------------------------------------------------
+# ---------------------------------------------------------------
+#  LINselect R package
+#  Copyright INRA 2017
+#  INRA, UR1404, Research Unit MaIAGE
+#  F78352 Jouy-en-Josas, France.
+# ---------------------------------------------------------------
+
 VARselect <- function
   ### Estimation in the regression model : \eqn{Y= X \beta + \sigma N(0,1)}\cr
   ### Variable selection by choosing the best predictor among
@@ -61,6 +67,7 @@ VARselect <- function
  ## will be returned. See Value.
  ) {
   #
+  Y <- as.vector(Y)
   n <- length(Y)
   if (normalize) X <- scale(X)
   # penalty calculation

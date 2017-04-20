@@ -1,3 +1,10 @@
+# ---------------------------------------------------------------
+#  LINselect R package
+#  Copyright INRA 2017
+#  INRA, UR1404, Research Unit MaIAGE
+#  F78352 Jouy-en-Josas, France.
+# ---------------------------------------------------------------
+
 simulData <- function
 ### Function to simulate data \eqn{Y = X \beta + \sigma N(0, 1)}
 (p=100, ##<< integer : number of variates. Should be >15 if \code{beta=NULL}
