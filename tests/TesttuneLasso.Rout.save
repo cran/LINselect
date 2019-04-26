@@ -1,7 +1,7 @@
 
-R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
-Copyright (C) 2016 The R Foundation for Statistical Computing
-Platform: x86_64-redhat-linux-gnu (64-bit)
+R Under development (unstable) (2019-03-06 r76206) -- "Unsuffered Consequences"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -74,7 +74,7 @@ In penalty(Delta, n, p, K) :
  err= 2 n n= 50 Dm= 9the values of the penalty function greater than 1e+08 are set to Inf 
  err= 2 n n= 50 Dm=  [... truncated]
 > res.tuneLasso$lasso$CV$support
- [1]  1  2  3  5  6 10 14 15 29 39 62 70
+ [1]  1  2  3  5  6  9 10 13 14 15 39
 > res.tuneLasso$lasso$Ls$support
  [1]  1  2  3  5  6 10 14 15 29 39 70
 > 
@@ -97,4 +97,4 @@ In penalty(Delta, n, p, K) :
 > 
 > proc.time()
    user  system elapsed 
-  1.851   0.011   1.867 
+  5.021   0.111   5.149 
