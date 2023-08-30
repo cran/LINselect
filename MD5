@@ -1,4 +1,4 @@
-7573ef78e8bc12acc934f0fd799b70e4 *DESCRIPTION
+799cede7fa2f306ca9cedc7617ad1210 *DESCRIPTION
 93656ec8d64d1fac3c395b82cfc60593 *NAMESPACE
 0a13b8b66032c6eeb43d263d10286619 *R/VARselect.R
 cdbafa64db97e9c50ca54be224c00498 *R/functions.R
@@ -10,11 +10,10 @@ a6fb853b53fc79aa58a474eff1d7c825 *R/penalty.R
 aec6d8374b51654f8467c3b35d328eb2 *demo/tuneLasso.R
 3558881af3e16c563caae00dca546214 *inst/doc/Notice.pdf
 0e8fcd9acb510ebf7ac0daf57e8dd555 *inst/extdata/diabetes.rda
-1a74bde5b8a4b468249b782bbeecf4cd *man/LINselect-package.Rd
-18b8457d78ecff38d28da1627e150605 *man/VARselect.Rd
+9a2a391705986b4483cca8673afdf9c1 *man/VARselect.Rd
 92ae4bc5dd2d18ec376d903c2f6fd1db *man/penalty.Rd
 742c81e0f3d1e6c8634d81ec05557bed *man/simulData.Rd
-759fad09e010a4de8fe34ab507ac8732 *man/tuneLasso.Rd
+670ae320bbb82888463a50aaed3ab200 *man/tuneLasso.Rd
 4325273c9a0ca764e616075138126ade *tests/TestVARselect.R
 2aebf2a7d359b25027d930d5fa735d5c *tests/TestVARselect.Rout.save
 aad6dc4848efbede631f561cdf8e208e *tests/TesttuneLasso.R

@@ -122,7 +122,7 @@ value of the LINselect criteria calculated in
 \references{See Baraud  et al. 2010 
 \url{http://hal.archives-ouvertes.fr/hal-00502156/fr/} \cr
 Giraud et al., 2013,
-\url{http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.ss/1356098553}}
+\url{https://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.ss/1356098553}}
 \author{Yannick Baraud, Christophe Giraud, Sylvie Huet}
 \note{When method is \code{lasso}, library \code{elasticnet} is loaded.
 
