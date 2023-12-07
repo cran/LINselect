@@ -1,4 +1,4 @@
-799cede7fa2f306ca9cedc7617ad1210 *DESCRIPTION
+32c6ff05c8ab9f02faf0fcc4bebc6793 *DESCRIPTION
 93656ec8d64d1fac3c395b82cfc60593 *NAMESPACE
 0a13b8b66032c6eeb43d263d10286619 *R/VARselect.R
 cdbafa64db97e9c50ca54be224c00498 *R/functions.R
@@ -17,5 +17,4 @@ aec6d8374b51654f8467c3b35d328eb2 *demo/tuneLasso.R
 4325273c9a0ca764e616075138126ade *tests/TestVARselect.R
 2aebf2a7d359b25027d930d5fa735d5c *tests/TestVARselect.Rout.save
 aad6dc4848efbede631f561cdf8e208e *tests/TesttuneLasso.R
-bed6e184f9bf7002c6d97d47069cb255 *tests/TesttuneLasso.Rout
 d42d5078bafe3e60208e59504852438f *tests/TesttuneLasso.Rout.save
