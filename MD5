@@ -1,4 +1,4 @@
-32c6ff05c8ab9f02faf0fcc4bebc6793 *DESCRIPTION
+cdae94dd7e3b281520db8973ef471674 *DESCRIPTION
 93656ec8d64d1fac3c395b82cfc60593 *NAMESPACE
 0a13b8b66032c6eeb43d263d10286619 *R/VARselect.R
 cdbafa64db97e9c50ca54be224c00498 *R/functions.R
@@ -10,7 +10,7 @@ a6fb853b53fc79aa58a474eff1d7c825 *R/penalty.R
 aec6d8374b51654f8467c3b35d328eb2 *demo/tuneLasso.R
 3558881af3e16c563caae00dca546214 *inst/doc/Notice.pdf
 0e8fcd9acb510ebf7ac0daf57e8dd555 *inst/extdata/diabetes.rda
-9a2a391705986b4483cca8673afdf9c1 *man/VARselect.Rd
+9dceb7531c8b687b48a6562b9341fca2 *man/VARselect.Rd
 92ae4bc5dd2d18ec376d903c2f6fd1db *man/penalty.Rd
 742c81e0f3d1e6c8634d81ec05557bed *man/simulData.Rd
 670ae320bbb82888463a50aaed3ab200 *man/tuneLasso.Rd

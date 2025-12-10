@@ -47,7 +47,7 @@ ridge. It is the input parameter \code{lambda} of function
 \code{\link[elasticnet]{enet}}}
   \item{ridge.lambda}{vector : tuning parameter of the
 ridge. It is the input parameter lambda of function
-\code{\link{lm.ridge}}}
+\code{lmridge:lm.ridge}}
   \item{rF.lmtry}{vector : tuning paramer \code{mtry} of function
 \code{\link[randomForest]{randomForest}}, \code{mtry} =p/\code{rF.lmtry}.}
   \item{pls.ncomp}{integer : tuning parameter of the pls. It is the
